@@ -13,6 +13,7 @@ body {
     background-color: #121111;
     width: calc(100vw -3px);
     height: 100vh;
+    max-width: 100%;
 }
 
 header {
