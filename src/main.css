@@ -10,7 +10,7 @@ html {
 }
 
 body {
-    background-color: #121111;
+    background-color: #0e0d0d;
     width: calc(100vw -3px);
     height: 100vh;
     max-width: 100%;
@@ -20,7 +20,7 @@ header {
     padding: 0px 60px;
     height: 60px;
     width: 100%;
-    background-color: #030305;
+    background-color: #03030565;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -106,16 +106,29 @@ a {
     opacity: 70%;
   }
 
+.teste {
+    min-width: 800px;
+    
+}
+
 .i-img-text {
     background: url("https://images.unsplash.com/photo-1534996858221-380b92700493?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1331&q=80") no-repeat ;
     background-size: cover;
     width: 100%;
+    
     height: 800px;
     align-items: center;
-    justify-content: left;
+    justify-content: space-between;
     padding: 0 60px;
     display: flex;
     background-attachment: fixed;
+    
+}
+
+.button-main-txt {
+    display: flex;
+    justify-content: right;
+    width: 100%;
     
 }
 
@@ -126,8 +139,8 @@ a {
     background-color: #3c17f300;
     border: 2px solid #3A17F3;
     border-radius: 5px;
+    
 
-    margin-left: 550px;
 }
 
 .btn-main:hover {
@@ -171,16 +184,17 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    background-color: #3A17F3;
+    align-items: left;
+    background-color: #131214;
+    border: 1px solid #29292e;
     padding: 30px;
     border-radius: 5px;
-    width: 250px;
+    width: 350px;
     height: 300px;
 }
 
 .card-one:hover {
-    box-shadow: 0px 0px 10px 0px #3A17F3;
+    box-shadow: 0px 0px 20px 0px #3A17F3;
     cursor: pointer;
 }
 
@@ -239,9 +253,10 @@ a {
 }
 
 .circle {
+    text-align: center;
     font-size: 30px;
-    margin-bottom: 30px;
-    background-color: black;
+    margin-bottom: 20px;
+    text-align: center;
     border-radius: 5px;
     padding: 12px;
     color: #3A17F3;
@@ -263,11 +278,13 @@ a {
 }
 
 .c-m-txt {
-    color: black;
+    color: #e1e1e6;
+    text-align: center;
+    margin-bottom: 15px;
 }
 
 .c-s-txt {
-    color: white;
+    color: #a8a8b3;
     font-size: 15px;
     text-align: center;
 }
@@ -286,6 +303,7 @@ a {
 .footer-txt {
     color: white;
     font-size: 12px;
+    font-weight: normal;
 }
 
 .scroll-out {
@@ -333,13 +351,17 @@ a {
 }
 
 .k {
-    background: #a217f3;
+    background: #29292E;
     margin: 40px;
     width: 300px;
+    align-items: center;
+    border-radius: 5px 5px 0px 0px;
+    border: none;
+    border-bottom: 2px solid #3A17F3;
 }
 
 .k:hover {
-    box-shadow: 0px 0px 10px 0px #a217f3;
+    box-shadow: 0px 0px 10px 0px #29292E;
 }
 
 .d {
