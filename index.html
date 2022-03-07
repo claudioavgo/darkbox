@@ -1,26 +1,73 @@
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="src/main.css">
-  <link rel="apple-touch-icon" sizes="180x180" href="src/icon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="src/icon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="src/icon/favicon-16x16.png">
-  <link rel="manifest" href="src/icon/site.webmanifest">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
-  
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="src/main.css" />
+  <link rel="stylesheet" href="src/animations.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="src/icon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="src/icon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="src/icon/favicon-16x16.png" />
+  <link rel="manifest" href="src/icon/site.webmanifest" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"
+    integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="src/script.js"></script>
+
   <script src="https://kit.fontawesome.com/b43d653dfa.js" crossorigin="anonymous"></script>
   <title>Dark Box</title>
 </head>
+
 <body>
+  <div id="featurePopover" style="display: none" class="feature-popover">
+    <div class="pop-sec">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 svg sp" fill="none" viewBox="0 0 24 24"
+        stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+      </svg>
+      <div>
+        <h3 class="pop-t">Security</h3>
+        <h3 class="pop-ts">Learn about Security</h3>
+      </div>
+    </div>
+    <div class="pop-sec">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 sp" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+      </svg>
+      <div>
+        <h3 class="pop-t">Lightest</h3>
+        <h3 class="pop-ts">Learn about Lightest</h3>
+      </div>
+    </div>
+    <div class="pop-sec">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 sp" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4" />
+      </svg>
+      <div>
+        <h3 class="pop-t">Uniqueaa</h3>
+        <h3 class="pop-ts">Learn about Uniqueaa</h3>
+      </div>
+    </div>
+  </div>
+
   <header>
     <div class="h-box-left">
-      <h1 class="logo unselectable"><span class="split">DBX</span></h1>
+      <h1 class="logo unselectable">
+        <span class="split">DBX</span>
+      </h1>
     </div>
     <div class="h-box-right">
-      <a href="index.html" class="btn">HOME</a>
-      <a class="btn" href="#features">FEATURES</a>
+      <a href="/" class="btn">HOME</a>
+      <a id="featuresBTN" class="btn fe">FEATURES</a>
+
       <a class="btn" href="#about">ABOUT</a>
       <a href="#testimonials" class="btn">TESTIMONIALS</a>
       <a href="mailto:" class="btn spc">CONTACT</a>
@@ -29,8 +76,12 @@
   <introduce>
     <div class="i-img-text">
       <div class="teste">
-        <h1 class="i-text">DARK <span class="split">BOX</span></h1>
-        <h3 class="i-sub-text">Welcome to the darkness.&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class="split">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span></h3>
+        <h1 class="i-text animate__animated animate__fadeIn">DARK <span class="split">BOX</span></h1>
+        <h3 class="i-sub-text">
+          Welcome to the
+          metaverse.&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+            class="split">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
+        </h3>
       </div>
       <div class="button-main-txt">
         <button class="btn-main">Get Started</button>
@@ -44,57 +95,209 @@
       </a>
     </div>
   </introduce>
-  <mid class="t-mid" >
-    <h1  class="main-txt-mid">The best <span class="underline">FEATURES</span></h1>
-    <div class="mid">
-      <div class="card-one">
-        <i class="circle fas fa-shield-alt"></i>
-        <h3 class="c-m-txt">Security</h3>
-        <h4 class="c-s-txt">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
-      </div>
-      <object class="line"></object>
-      <div class="card-one z">
-        <i class="circle fas fa-feather-alt"></i>
-        <h3 class="c-m-txt">Lightest</h3>
-        <h4 class="c-s-txt">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
-      </div>
-      <object class="line x"></object>
-      <div class="card-one">
-        <i class="circle fas fa-fingerprint"></i>
-        <h3 class="c-m-txt">Unique</h3>
-        <h4 class="c-s-txt">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
+
+  <section class="container" id="about">
+    <div style="margin: 30px 0px 100px">
+      <h1 class="container-txt">
+        <span class="underline">What is Dark Box?</span>
+      </h1>
+      <h3 class="container-s-txt">
+        Lorem Ipsum is simply dummy text of the printing and
+        typesetting industry.Lorem Ipsum is simply dummy text of the
+        printing and typesetting industry.Lorem Ipsum is simply
+        dummy text of the printing and typesetting industry.Lorem
+        Ipsum is simply dummy text of the printing and typesetting
+        industry.
+      </h3>
+    </div>
+  </section>
+
+  <mid>
+    <div class="pre-mid">
+      <h1 class="main-txt-mid">
+        The best <span class="underline">FEATURES</span>
+      </h1>
+      <div class="mid">
+        <div class="card-one">
+          <i class="circle fas fa-shield-alt"></i>
+          <h3 class="c-m-txt">Security</h3>
+          <h4 class="c-s-txt">
+            Lorem Ipsum is simply dummy text of the printing and
+            typesetting industry.
+          </h4>
+        </div>
+        <object class="line"></object>
+        <div class="card-one z">
+          <i class="circle fas fa-feather-alt"></i>
+          <h3 class="c-m-txt">Lightest</h3>
+          <h4 class="c-s-txt">
+            Lorem Ipsum is simply dummy text of the printing and
+            typesetting industry.
+          </h4>
+        </div>
+        <object class="line x"></object>
+        <div class="card-one">
+          <i class="circle fas fa-fingerprint"></i>
+          <h3 class="c-m-txt">Unique</h3>
+          <h4 class="c-s-txt">
+            Lorem Ipsum is simply dummy text of the printing and
+            typesetting industry.
+          </h4>
+        </div>
       </div>
     </div>
   </mid>
-  <section class="container" id="about">
-    <object class="u"></object>
+
+  <section class="projects-section">
     <div>
-      <h1 class="container-txt"><span class="underline">About</span></h1>
-      <h3 class="container-s-txt">Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3>
+      <h1>Projects</h1>
+      <h3>we maden.</h3>
+    </div>
+    <div class="ps-project">
+      <div class="ps-foto"></div>
+      <div class="ps-text">
+        <h1>Control Galaxy</h1>
+        <h3>
+          Lorem Ipsum is simply dummy text of the printing and
+          typesetting industry
+        </h3>
+      </div>
+    </div>
+
+    <div class="ps-project">
+      <div class="ps-foto s"></div>
+      <div class="ps-text">
+        <h1>InterSlash</h1>
+        <h3>
+          Lorem Ipsum is simply dummy text of the printing and
+          typesetting industry
+        </h3>
+      </div>
     </div>
   </section>
-  <section class="container" >
-    <object class="u l" ></object>
-    <h1 class="container-txt"><span class="underline">Test</span>imonials</h1>
+
+  <section class="container o">
+    <h1 class="container-txt">
+      <span class="underline">Testim</span>onials
+    </h1>
     <div class="d" id="testimonials">
       <div class="card-one k">
         <i class="photo-c circle"></i>
         <h3 class="c-m-txt">Rhay</h3>
-        <h4 class="c-s-txt">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
+        <h4 class="c-s-txt">
+          Lorem Ipsum is simply dummy text of the printing and
+          typesetting industry.
+        </h4>
       </div>
 
       <div class="card-one k">
         <i class="photo-n circle"></i>
         <h3 class="c-m-txt">Haiten</h3>
-        <h4 class="c-s-txt">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
+        <h4 class="c-s-txt">
+          Lorem Ipsum is simply dummy text of the printing and
+          typesetting industry.
+        </h4>
       </div>
     </div>
   </section>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-app.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyD0LdrA766U3DCPFHW9ru63Dkcrywmj_NE",
+      authDomain: "darkbox-a.firebaseapp.com",
+      databaseURL: "https://darkbox-a-default-rtdb.firebaseio.com",
+      projectId: "darkbox-a",
+      storageBucket: "darkbox-a.appspot.com",
+      messagingSenderId: "480867554699",
+      appId: "1:480867554699:web:57203acd9e1dbbfc04cb8e",
+      measurementId: "G-XGBTVCXYG8",
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+
+    import {
+      getDatabase,
+      ref,
+      set,
+      onValue,
+      child,
+      get,
+    } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-database.js";
+    document.getElementById("btn").addEventListener("click", a);
+    function a() {
+      const print = document.getElementById("response");
+      const dbRef = ref(getDatabase());
+      const input = document.getElementById("finder").value;
+      let msg;
+
+      get(child(dbRef, `users/${input}`))
+        .then((snapshot) => {
+          if (snapshot.exists()) {
+            print.innerHTML = snapshot.val().email;
+          } else {
+            print.innerHTML = "No data available";
+            console.log("No data available");
+          }
+        })
+        .catch((error) => {
+          msg = error;
+        });
+    }
+
+    function writeUserData(userId, name, email, imageUrl) {
+      const db = getDatabase();
+      set(ref(db, "users/" + userId), {
+        username: name,
+        email: email,
+        profile_picture: imageUrl,
+      });
+    }
+    document
+      .getElementById("featuresBTN")
+      .addEventListener("click", xgf);
+    const popover = document.getElementById("featurePopover").style;
+    let fc = 0;
+    function xgf() {
+      if (fc == 0) {
+        popover.display = "flex";
+        console.log("Ativado");
+        fc = 1;
+      } else if (fc == 1) {
+        console.log("Desativado");
+        popover.display = "none";
+        fc = 0;
+      }
+    }
+  </script>
+  <search style="display: none">
+    <div class="tbox">
+      <div class="search">
+        <form>
+          <input id="finder" value="a" type="text" />
+          <button type="button" id="btn" class="send-btn">
+            Send
+          </button>
+          <input type+"" </form>
+      </div>
+      <h1 id="response"></h1>
+    </div>
+  </search>
   <section class="footer">
     <div>
       <object class="footer-line"></object>
-      <h3 class="footer-txt">2022 © coded.today - All rights reserved.</h3>
+      <h3 class="footer-txt">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 svg" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd"
+            d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z"
+            clip-rule="evenodd" />
+        </svg>
+        2022 © coded.today - All rights reserved.
+      </h3>
     </div>
   </section>
 </body>
+
 </html>

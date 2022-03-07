@@ -1,0 +1,17 @@
+@keyframes backgroundMove {
+    50% {
+        background-color: red;
+    }
+    100% {
+        background-color: green;
+    }
+}
+
+@keyframes x {
+    0%{
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
